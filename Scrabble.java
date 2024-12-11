@@ -84,7 +84,7 @@ public class Scrabble {
 		char[] hand = new char[HAND_SIZE];
 		for (int i = 0; i < randomLength; i++) 
 		{
-			hand[i] = (char) ('a' + (int) (Math.random() * 26)); // Random letter a-z
+			hand[i] = (char) ('a' + (int) (Math.random() * 25)); // Random letter a-z
 		}
 		int insertIndexA = (int) (Math.random() * HAND_SIZE);
 		int insertIndexE = (int) (Math.random() * HAND_SIZE);
