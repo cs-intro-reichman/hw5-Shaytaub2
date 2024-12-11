@@ -64,6 +64,7 @@ public class Scrabble {
 			char letter = word.charAt(i);
 			score += SCRABBLE_LETTER_VALUES[letter - 'a'];
 		}
+		score = score*word.length();
 		if (word.length() == HAND_SIZE) 
 		{
 			score += 50;
@@ -89,7 +90,9 @@ public class Scrabble {
 		int insertIndexE = (int) (Math.random() * HAND_SIZE);
 		hand[insertIndexA] = 'a';
 		hand[insertIndexE] = 'e';
-		return new String(hand);
+		String newHand = new String(hand);
+		newHand.toLowerCase();
+		return newHand;
 	}
 	
     // Runs a single hand in a Scrabble game. Each time the user enters a valid word:
@@ -109,10 +112,7 @@ public class Scrabble {
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
 			String input = in.readString();
-			
-			
-
-			
+			//replace the code
 			break;
 		}
 		if (hand.length() == 0) {
