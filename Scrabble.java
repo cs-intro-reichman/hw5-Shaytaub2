@@ -128,9 +128,10 @@ public class Scrabble {
 			} else {
 				score += wordScore(input);
 				// System.out.println(input + " earned " + wordScore(input) + " points. " + );
-				System.out.printf("%s earned %d points. Total: %d points", input, wordScore(input), score);
+				System.out.printf("%s earned %d points. Total: %d points\n", input, wordScore(input), score);
 				// update the hand
 				MyString.remove(hand, input);
+				System.out.println();
 			}
 		}
 		if (hand.length() == 0) {
@@ -169,6 +170,7 @@ public class Scrabble {
 					System.out.println("Invalid command. Please enter 'n', 'r', or 'e'.");
 				}
 			}
+			System.out.println();
 		}
 	}
 
