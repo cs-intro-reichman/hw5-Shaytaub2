@@ -46,7 +46,7 @@ public class Scrabble {
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
 		for (int i = 0; i < NUM_OF_WORDS; i++) {
-			if (DICTIONARY[i].equals(word)) 
+			if (DICTIONARY[i].toLowerCase().equals(word)) 
 			{
 				return true; 
 			}
@@ -84,7 +84,7 @@ public class Scrabble {
 		char[] hand = new char[HAND_SIZE];
 		for (int i = 0; i < randomLength; i++) 
 		{
-			hand[i] = (char) ('a' + (int) (Math.random() * 25)); // Random letter a-z
+			hand[i] = (char) ('a' + (int) (Math.random() * 26)); // Random letter a-z
 		}
 		int insertIndexA = (int) (Math.random() * HAND_SIZE);
 		int insertIndexE = (int) (Math.random() * HAND_SIZE);
@@ -115,7 +115,7 @@ public class Scrabble {
 			if (input.equals(".")){
 				break;
 			}
-			if (!isWordInDictionary(hand))
+			if (isWordInDictionary(hand))
 			{
 				System.out.println("Invalid choice. Try again");
 				break;
@@ -123,7 +123,7 @@ public class Scrabble {
 			else
 			{
 				score += wordScore(input);
-				System.out.println("Hand score: " + wordScore(input) + "points");
+				System.out.println("Hand score: " + wordScore(input) + " points");
 				System.out.println("Total score: " + score + " points");
 				//update the hand
 				for (int i=0; i<input.length(); i++)
@@ -165,10 +165,10 @@ public class Scrabble {
 	}
 
 	public static void main(String[] args) {
-		testBuildingTheDictionary();  
-		testScrabbleScore();    
-		testCreateHands();  
-		////testPlayHands();
+		//testBuildingTheDictionary();  
+		//testScrabbleScore();    
+		//testCreateHands();  
+		testPlayHands();
 		////playGame();
 	}
 
@@ -196,7 +196,7 @@ public class Scrabble {
 	
 	public static void testPlayHands() {
 		init();
-		//playHand("ocostrza");
+		playHand("ocostrza");
 		//playHand("arbffip");
 		//playHand("aretiin");
 	}
