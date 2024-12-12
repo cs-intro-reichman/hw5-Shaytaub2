@@ -122,11 +122,9 @@ public class Scrabble {
 				break;
 			} else if(!MyString.subsetOf(input, hand)){
 				System.out.println("Invalid word. Try again.");
-				System.out.println();
 			}
 			 else if (!isWordInDictionary(input)){
 				System.out.println("No such word in the dictionary. Try again.");
-				System.out.println();
 			} else {
 				score += wordScore(input);
 				// System.out.println(input + " earned " + wordScore(input) + " points. " + );
