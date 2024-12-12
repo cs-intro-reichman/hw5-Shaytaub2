@@ -130,7 +130,7 @@ public class Scrabble {
 				// System.out.println(input + " earned " + wordScore(input) + " points. " + );
 				System.out.printf("%s earned %d points. Total: %d points\n", input, wordScore(input), score);
 				// update the hand
-				MyString.remove(hand, input);
+				hand = MyString.remove(hand, input);
 				System.out.println();
 			}
 		}
@@ -211,3 +211,5 @@ public class Scrabble {
 		// playHand("aretiin");
 	}
 }
+
+
