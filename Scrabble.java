@@ -91,6 +91,10 @@ public class Scrabble {
 		}
 		int insertIndexA = (int) (Math.random() * HAND_SIZE);
 		int insertIndexE = (int) (Math.random() * HAND_SIZE);
+		while (insertIndexA==insertIndexE)
+		{
+			insertIndexE = (int) (Math.random() * HAND_SIZE);
+		}
 		hand[insertIndexA] = 'a';
 		hand[insertIndexE] = 'e';
 		String newHand = new String(hand);
