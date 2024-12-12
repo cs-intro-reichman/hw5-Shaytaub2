@@ -128,7 +128,7 @@ public class Scrabble {
 			} else {
 				score += wordScore(input);
 				// System.out.println(input + " earned " + wordScore(input) + " points. " + );
-				System.out.printf("%s earned %d points. Total: %d points\n", input, wordScore(input), score);
+				System.out.printf("%s earned %d points. Score: %d points\n", input, wordScore(input), score);
 				// update the hand
 				hand = MyString.remove(hand, input);
 				System.out.println();
@@ -163,11 +163,10 @@ public class Scrabble {
 			} else {
 				if (input.equals("e")) {
 					// Exit the game
-					System.out.println("Thank you for playing Scrabble!");
 					break;
 				} else {
 					// Invalid input
-					System.out.println("Invalid command. Please enter 'n', 'r', or 'e'.");
+					System.out.println("Invalid command. Please enter 'n' or 'e'.");
 				}
 			}
 			System.out.println();
